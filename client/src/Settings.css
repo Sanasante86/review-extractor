@@ -1,0 +1,97 @@
+/* Settings Component Styles */
+.Settings {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.settings-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.settings-header h2 {
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.back-button {
+  background-color: transparent;
+  color: #3498db;
+  border: 1px solid #3498db;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+.settings-section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.settings-section h3 {
+  margin-top: 0;
+  color: #2c3e50;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.current-api-key {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.current-api-key p {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.current-api-key span {
+  font-family: monospace;
+  font-weight: bold;
+  color: #3498db;
+}
+
+.api-key-form {
+  margin-top: 20px;
+}
+
+.success-message {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #e8f7f0;
+  border-radius: 4px;
+  border-left: 4px solid #27ae60;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.success-message p {
+  margin: 0;
+  color: #27ae60;
+}
+
+.success-message button {
+  background-color: transparent;
+  color: #27ae60;
+  padding: 5px 10px;
+}

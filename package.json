@@ -1,0 +1,76 @@
+{
+  "name": "review-extractor",
+  "version": "1.0.0",
+  "description": "Application to extract Google reviews using Pleper API",
+  "main": "main.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "client": "cd client && npm start",
+    "client-install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "dev-full": "concurrently \"npm run dev\" \"npm run client\"",
+    "electron-dev": "concurrently \"cross-env ELECTRON_START_URL=http://localhost:3000 electron .\" \"npm run client\"",
+    "electron": "electron .",
+    "postinstall": "electron-builder install-app-deps",
+    "pack": "npm run build && electron-builder --dir",
+    "dist": "npm run build && electron-builder",
+    "make-exe": "npm run build && electron-builder --win"
+  },
+  "keywords": [
+    "reviews",
+    "google",
+    "pleper",
+    "api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "exceljs": "^4.4.0",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^36.2.1",
+    "electron-builder": "^26.0.12",
+    "nodemon": "^3.1.10",
+    "wait-on": "^8.0.3"
+  },
+  "build": {
+    "appId": "com.reviewextractor.app",
+    "productName": "Google Reviews Extractor",
+    "files": [
+      "main.js",
+      "preload.js",
+      "server.js",
+      "config.js",
+      "config.json",
+      "package.json",
+      "client/build/**/*"
+    ],
+    "directories": {
+      "buildResources": "client/public",
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "client/public/logo512.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
+    },
+    "extraResources": [
+      {
+        "from": "node_modules",
+        "to": "node_modules"
+      }
+    ],
+    "asar": false
+  }
+}
