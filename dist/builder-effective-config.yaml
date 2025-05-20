@@ -1,0 +1,26 @@
+directories:
+  output: dist
+  buildResources: client/public
+appId: com.reviewextractor.app
+productName: Google Reviews Extractor
+files:
+  - filter:
+      - main.js
+      - preload.js
+      - server.js
+      - config.js
+      - config.json
+      - package.json
+      - client/build/**/*
+win:
+  target: nsis
+  icon: client/public/logo512.png
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+extraResources:
+  - from: node_modules
+    to: node_modules
+asar: false
+electronVersion: 36.2.1
