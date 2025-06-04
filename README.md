@@ -25,6 +25,10 @@ A desktop application that extracts Google reviews using the Pleper API and expo
 5. Wait for the extraction process to complete
 6. Download the Excel file containing the reviews
 
+### Prerequisites
+
+1. Install Node on the device `https://nodejs.org/en/download`
+
 ### CID Format
 
 The CID is the unique identifier in Google Maps URL: `https://maps.google.com/?cid=YOUR_CID_HERE`
